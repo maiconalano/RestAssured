@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42c8ca0d-748c-4b97-b2a4-01b2f3a5d283" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/UserJsonTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2kh5rqTI7MdqFWHMh2fHHiElfdy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.UserJsonTest.deveValidarAvancadas">
+    <configuration name="UserJsonTest.deveValidarAvancadas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.UserJsonTest" />
+      <option name="METHOD_NAME" value="deveValidarAvancadas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserJsonTest.deveValidarIdInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.UserJsonTest" />
+      <option name="METHOD_NAME" value="deveValidarIdInexistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserJsonTest.deveValidarLista" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.UserJsonTest" />
+      <option name="METHOD_NAME" value="deveValidarLista" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserJsonTest.deveValidarListaDeTodosUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.UserJsonTest" />
+      <option name="METHOD_NAME" value="deveValidarListaDeTodosUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserJsonTest.deveValidarSegundoNivel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.UserJsonTest" />
+      <option name="METHOD_NAME" value="deveValidarSegundoNivel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserJsonTest.deveValidarAvancadas" />
+        <item itemvalue="JUnit.UserJsonTest.deveValidarListaDeTodosUsers" />
+        <item itemvalue="JUnit.UserJsonTest.deveValidarIdInexistente" />
+        <item itemvalue="JUnit.UserJsonTest.deveValidarLista" />
+        <item itemvalue="JUnit.UserJsonTest.deveValidarSegundoNivel" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42c8ca0d-748c-4b97-b2a4-01b2f3a5d283" name="Changes" comment="" />
+      <created>1723723171525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723723171525</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
