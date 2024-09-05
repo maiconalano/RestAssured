@@ -5,22 +5,27 @@ import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import jdk.jfr.Description;
+import org.junit.BeforeClass;
 import org.junit.Test;
+import restAssuredClass.Properties.PropertiesJson;
 
 import java.util.ArrayList;
 
+import static io.restassured.RestAssured.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
-public class UserJsonTest {
+public class UserJsonTest extends PropertiesJson {
 
     @Description("Teste de primeiro nível")
     @Test
     public void deveVerificarPrimeiroNivel(){
+
+
         given()
                 .when()
-                .get("http://restapi.wcaquino.me/users/1")
+                .get("/users/1")
                 .then()
                 .statusCode(200)
                 .body("id", is(1))
@@ -31,7 +36,7 @@ public class UserJsonTest {
     @Description("Teste de verificação primeiro nivel de outras formas")
     @Test
     public void deveValidarOutrasFormas(){
-        Response response = RestAssured.request(Method.GET,"http://restapi.wcaquino.me/users/1");
+        Response response = request(Method.GET,"http://restapi.wcaquino.me/users/1");
 
         assertEquals("1",response.path("id").toString());
 
@@ -48,7 +53,7 @@ public class UserJsonTest {
     public void deveValidarSegundoNivel(){
         given()
                 .when()
-                .get("http://restapi.wcaquino.me/users/2")
+                .get("/users/2")
                 .then()
                 .statusCode(200)
                 .body("name", containsString("Joaquina"))
@@ -61,7 +66,7 @@ public class UserJsonTest {
     public void deveValidarLista(){
         given()
                 .when()
-                .get("http://restapi.wcaquino.me/users/3")
+                .get("/users/3")
                 .then()
                 .statusCode(200)
                 .body("name", containsString("Ana"))
@@ -79,7 +84,7 @@ public class UserJsonTest {
     public void deveValidarIdInexistente(){
         given()
                 .when()
-                .get("http://restapi.wcaquino.me/users/4")
+                .get("/users/4")
                 .then()
                 .statusCode(404)
                 .body("error",equalTo("Usuário inexistente"))
@@ -92,7 +97,7 @@ public class UserJsonTest {
     public void deveValidarListaDeTodosUsers(){
         given()
                 .when()
-                .get("http://restapi.wcaquino.me/users")
+                .get("/users")
                 .then()
                 .statusCode(200)
                 .body("",hasSize(3))
@@ -110,7 +115,7 @@ public class UserJsonTest {
     public void deveValidarAvancadas(){
         given()
                 .when()
-                .get("http://restapi.wcaquino.me/users")
+                .get("/users")
                 .then()
                 .statusCode(200)
                 .body("",hasSize(3))
@@ -137,7 +142,7 @@ public class UserJsonTest {
         ArrayList<String> names =
         given()
                 .when()
-                .get("http://restapi.wcaquino.me/users")
+                .get("/users")
                 .then()
                 .statusCode(200)
                 .extract().path("name.findAll{it.startsWith('Maria')}")
