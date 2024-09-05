@@ -5,15 +5,11 @@ import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import jdk.jfr.Description;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.ArrayList;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.request;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
@@ -123,8 +119,34 @@ public class UserJsonTest {
                 .body("findAll{it.age <= 25 && it.age > 20}.name", hasItem("Maria Joaquina"))
                 .body("findAll{it.age <= 25}[-1].name", is("Ana Júlia"))
                 .body("find{it.age <= 25}.name", is("Maria Joaquina"))
+                .body("findAll{it.name.contains('n')}.name",hasItems("Maria Joaquina","Ana Júlia") )
+                .body("name.collect{it.toUpperCase()}", hasItem("MARIA JOAQUINA"))
+                .body("name.findAll{it.startsWith('Maria')}.collect{it.toUpperCase()}.toArray()", allOf(arrayContaining("MARIA JOAQUINA"), arrayWithSize(1)))
+                .body("age.collect{it*2}", hasItems(60,50,40))
+                .body("id.max()", is(3))
+                .body("salary.min()", is(1234.5678f))
+                .body("salary.findAll{it != null}.sum()",is(closeTo(3734.5678f, 0.001)))
+                .body("salary.findAll{it != null}.sum()", allOf(greaterThan(3000d), lessThan(5000d)))
         ;
 
     }
 
+    @Description("Utilizando o teste acima JsonPath para JAVA")
+    @Test
+    public void devoUnirJsonPathComJava(){
+        ArrayList<String> names =
+        given()
+                .when()
+                .get("http://restapi.wcaquino.me/users")
+                .then()
+                .statusCode(200)
+                .extract().path("name.findAll{it.startsWith('Maria')}")
+                ;
+        assertEquals(1,names.size());
+        assertTrue(names.get(0).equalsIgnoreCase("maria joaquina"));
+        assertEquals(names.get(0).toUpperCase(),"maria joaquina".toUpperCase());
+
+
+
+    }
 }
