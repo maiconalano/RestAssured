@@ -1,11 +1,14 @@
 package restAssuredClass;
 
-import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.log.LogDetail;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 import jdk.jfr.Description;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import restAssuredClass.Properties.PropertiesJson;
 
@@ -64,7 +67,16 @@ public class UserJsonTest extends PropertiesJson {
     @Description("Teste de lista nível")
     @Test
     public void deveValidarLista(){
+        RequestSpecBuilder reqBuilder = new RequestSpecBuilder();
+        reqBuilder.log(LogDetail.ALL);
+        RequestSpecification requestSpecification = reqBuilder.build();
+
+        ResponseSpecBuilder resBuilder = new ResponseSpecBuilder();
+        resBuilder.log(LogDetail.ALL);
+        ResponseSpecification responseSpecification = resBuilder.build();
+
         given()
+                .spec(requestSpecification)
                 .when()
                 .get("/users/3")
                 .then()
@@ -75,6 +87,7 @@ public class UserJsonTest extends PropertiesJson {
                 .body("filhos[1].name",is("Luizinho"))
                 .body("filhos.name",hasSize(2))
                 .body("filhos.name",hasItem("Zezinho"))
+                .spec(responseSpecification)
                 ;
 
     }
