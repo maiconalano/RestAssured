@@ -13,5 +13,7 @@ public class PropertiesJson {
         baseURI = "http://restapi.wcaquino.me";
         //port = 443;
         //basePath = "";
+
+        requestSpecification = given().contentType("application/json");
    }
 }

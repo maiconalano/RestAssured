@@ -16,7 +16,6 @@ public class VerbsTest extends PropertiesJson {
     public void deveSalvarUsuario(){
         given()
                 .log().all()
-                .contentType("application/json")
                 .body("{\"name\": \"Jose\",\"age\": 50}")
             .when()
                 .post("/users")
@@ -35,7 +34,6 @@ public class VerbsTest extends PropertiesJson {
     public void naoDeveSalvarUsuarioSemNome(){
         given()
                 .log().all()
-                .contentType("application/json")
                 .body("{\"age\": 50}")
                 .when()
                 .post("/users")
@@ -53,16 +51,46 @@ public class VerbsTest extends PropertiesJson {
     public void deveAlterarUsuarioRegistroPut(){
         given()
                 .log().all()
-                .contentType("application/json")
                 .body("{\"name\": \"Usuario Alterado\",\"age\": 80}")
                 .when()
                 .put("/users/1")
                 .then()
                 .log().all()
-               // .statusCode(400)
-               // .body("id", is(nullValue()))
-               // .body("error",is("Name é um atributo obrigatório"))
+                .statusCode(200)
+                .body("id", is(1))
+                .body("name",is("Usuario Alterado"))
+                .body("age",is(80))
+                .body("salary",is(1234.5678f))
 
+        ;
+
+    }
+    @Description("Validação do metodo DELETE")
+    @Test
+    public void deveDeletarRegistro(){
+        given()
+                .log().all()
+                .when()
+                .delete("/users/1")
+                .then()
+                .log().all()
+                .statusCode(204)
+        ;
+
+    }
+
+
+    @Description("Validação do metodo DELETE usuario inexistente")
+    @Test
+    public void naoDeveDeletarRegistroInexistente(){
+        given()
+                .log().all()
+                .when()
+                .delete("/users/4")
+                .then()
+                .log().all()
+                .statusCode(400)
+                .body("error",is("Registro inexistente"))
         ;
 
     }

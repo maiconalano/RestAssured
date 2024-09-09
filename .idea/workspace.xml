@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42c8ca0d-748c-4b97-b2a4-01b2f3a5d283" name="Changes" comment="feat: add project">
-      <change afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/VerbsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/restAssuredClass/Properties/PropertiesJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/Properties/PropertiesJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/restAssuredClass/UserJsonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/UserJsonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/restAssuredClass/VerbsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/VerbsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,38 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.VerbsTest.deveAlterarUsuarioRegistroPut">
-    <configuration name="UserJsonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aulaRestASsured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restAssuredClass.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="restAssuredClass" />
-      <option name="MAIN_CLASS_NAME" value="restAssuredClass.UserJsonTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserJsonTest.deveValidarLista" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aulaRestASsured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restAssuredClass.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="restAssuredClass" />
-      <option name="MAIN_CLASS_NAME" value="restAssuredClass.UserJsonTest" />
-      <option name="METHOD_NAME" value="deveValidarLista" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.VerbsTest.naoDeveDeletarRegistroInexistente">
     <configuration name="VerbsTest.deveAlterarUsuarioRegistroPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aulaRestASsured" />
       <extension name="coverage">
@@ -96,6 +64,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VerbsTest.deveDeletarRegistro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.VerbsTest" />
+      <option name="METHOD_NAME" value="deveDeletarRegistro" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VerbsTest.deveSalvarUsuario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aulaRestASsured" />
       <extension name="coverage">
@@ -107,6 +91,22 @@
       <option name="PACKAGE_NAME" value="restAssuredClass" />
       <option name="MAIN_CLASS_NAME" value="restAssuredClass.VerbsTest" />
       <option name="METHOD_NAME" value="deveSalvarUsuario" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerbsTest.naoDeveDeletarRegistroInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.VerbsTest" />
+      <option name="METHOD_NAME" value="naoDeveDeletarRegistroInexistente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VerbsTest.naoDeveDeletarRegistroInexistente" />
+        <item itemvalue="JUnit.VerbsTest.deveDeletarRegistro" />
         <item itemvalue="JUnit.VerbsTest.deveAlterarUsuarioRegistroPut" />
-        <item itemvalue="JUnit.VerbsTest.naoDeveSalvarUsuarioSemNome" />
         <item itemvalue="JUnit.VerbsTest.deveSalvarUsuario" />
-        <item itemvalue="JUnit.UserJsonTest.deveValidarLista" />
-        <item itemvalue="JUnit.UserJsonTest" />
+        <item itemvalue="JUnit.VerbsTest.naoDeveSalvarUsuarioSemNome" />
       </list>
     </recent_temporary>
   </component>
