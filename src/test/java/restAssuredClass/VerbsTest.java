@@ -6,6 +6,9 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 import restAssuredClass.Properties.PropertiesJson;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
@@ -91,6 +94,28 @@ public class VerbsTest extends PropertiesJson {
                 .log().all()
                 .statusCode(400)
                 .body("error",is("Registro inexistente"))
+        ;
+
+    }
+    @Description("Salvar usuário usando MAP via POST")
+    @Test
+    public void deveSalvarUtilizandoMap(){
+        Map <String, Object> params = new HashMap<String, Object>();
+        params.put("name","Usuario via map");
+        params.put("age",25);
+
+        given()
+                .log().all()
+                .body(params)
+                .when()
+                .post("/users")
+                .then()
+                .log().all()
+                .statusCode(201)
+                .body("id", is(notNullValue()))
+                .body("name",is("Usuario via map"))
+                .body("age",is(25))
+
         ;
 
     }
