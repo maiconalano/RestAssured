@@ -3,14 +3,17 @@ package restAssuredClass;
 import io.restassured.RestAssured;
 import jdk.jfr.Description;
 import org.hamcrest.Matchers;
+import org.junit.Assert;
 import org.junit.Test;
 import restAssuredClass.Properties.PropertiesJson;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertEquals;
 
 public class VerbsTest extends PropertiesJson {
 
@@ -115,6 +118,49 @@ public class VerbsTest extends PropertiesJson {
                 .body("id", is(notNullValue()))
                 .body("name",is("Usuario via map"))
                 .body("age",is(25))
+
+        ;
+
+    }
+
+    @Description("Salvar usuário usando Objeto via POST")
+    @Test
+    public void deveSalvarUtilizandoObjeto(){
+        User user = new User("Usuario Objeto",25);
+        given()
+                .log().all()
+                .body(user)
+                .when()
+                .post("/users")
+                .then()
+                .log().all()
+                .statusCode(201)
+                .body("id", is(notNullValue()))
+                .body("name",is("Usuario Objeto"))
+                .body("age",is(25))
+
+        ;
+
+    }
+
+    @Description("Salvar usuário deserealizar Objeto via POST")
+    @Test
+    public void deveSalvarDeserealizarObjeto(){
+        User user = new User("Usuario Deserealizado",25);
+        User usuarioInserido = given()
+                .log().all()
+                .body(user)
+                .when()
+                .post("/users")
+                .then()
+                .log().all()
+                .statusCode(201)
+                .extract().body().as(User.class);
+
+        System.out.println(usuarioInserido);
+        assertThat(usuarioInserido.getId(),notNullValue());
+        assertEquals("Usuario Deserealizado", usuarioInserido.getName());
+        assertThat(usuarioInserido.getAge(),is(25));
 
         ;
 
