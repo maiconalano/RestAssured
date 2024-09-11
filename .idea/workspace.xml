@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42c8ca0d-748c-4b97-b2a4-01b2f3a5d283" name="Changes" comment="feat: add project">
-      <change afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/EnvioDadosTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/users.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/FileTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/HTML.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/restAssuredClass/VerbsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAssuredClass/VerbsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,22 +48,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.EnvioDadosTest.deveEnviarValorViaHeader">
-    <configuration name="EnvioDadosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aulaRestASsured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restAssuredClass.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="restAssuredClass" />
-      <option name="MAIN_CLASS_NAME" value="restAssuredClass.EnvioDadosTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\aulaRestAssured\aulaRestASsured\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FileTest.deveEnviarArquivo">
     <configuration name="EnvioDadosTest.deveEnviarValorViaHeader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aulaRestASsured" />
       <extension name="coverage">
@@ -75,22 +65,6 @@
       <option name="PACKAGE_NAME" value="restAssuredClass" />
       <option name="MAIN_CLASS_NAME" value="restAssuredClass.EnvioDadosTest" />
       <option name="METHOD_NAME" value="deveEnviarValorViaHeader" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EnvioDadosTest.deveEnviarValorViaQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aulaRestASsured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restAssuredClass.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="restAssuredClass" />
-      <option name="MAIN_CLASS_NAME" value="restAssuredClass.EnvioDadosTest" />
-      <option name="METHOD_NAME" value="deveEnviarValorViaQuery" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VerbsTest.deveSalvarDeserealizarObjeto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileTest.deveEnviarArquivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="aulaRestASsured" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +95,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="restAssuredClass" />
-      <option name="MAIN_CLASS_NAME" value="restAssuredClass.VerbsTest" />
-      <option name="METHOD_NAME" value="deveSalvarDeserealizarObjeto" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.FileTest" />
+      <option name="METHOD_NAME" value="deveEnviarArquivo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest.deveObrigarEnvioArquivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.FileTest" />
+      <option name="METHOD_NAME" value="deveObrigarEnvioArquivo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HTML.deveFazerBuscasComHtml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aulaRestASsured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAssuredClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAssuredClass" />
+      <option name="MAIN_CLASS_NAME" value="restAssuredClass.HTML" />
+      <option name="METHOD_NAME" value="deveFazerBuscasComHtml" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileTest.deveEnviarArquivo" />
+        <item itemvalue="JUnit.FileTest.deveObrigarEnvioArquivo" />
+        <item itemvalue="JUnit.HTML.deveFazerBuscasComHtml" />
         <item itemvalue="JUnit.EnvioDadosTest.deveEnviarValorViaHeader" />
         <item itemvalue="JUnit.EnvioDadosTest.deveEnviarValorViaQueryParam" />
-        <item itemvalue="JUnit.EnvioDadosTest.deveEnviarValorViaQuery" />
-        <item itemvalue="JUnit.EnvioDadosTest" />
-        <item itemvalue="JUnit.VerbsTest.deveSalvarDeserealizarObjeto" />
       </list>
     </recent_temporary>
   </component>
